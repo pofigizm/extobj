@@ -1,19 +1,21 @@
 # extobj.js
 ###[en]
-`extobj.js` extend standard Object with two methods assignDeep and createDeep, which works recursively as standard methods (assign and create) to all levels of object, including array.
+`extobj.js` extend standard Object with new methods assignDeep, createDeep and cloneDeep, which works recursively as standard methods (assign(es6) and create) to all levels of object, including array.
 
 `assignDeep` return self first argument with overridden value and methods from last to third arguments. If second arguments is true then all array in first argument will be cleaned before.
 
 `createDeep` return new object cloned from second arguments with set prototype to first arguments. Also on each down object will be set prototype to upper object.
 
-###[rus]
-`extobj.js` расширяет стандартный Object двумя методами assignDeep и createDeep.
+`cloneDeep` return new object which clonning object in argument.
 
-Мои методы делают тоже что и стандартные (assign и create) только рекурсивно ко всем уровням обьекта, включаяя массивы.
+###[rus]
+`extobj.js` расширяет стандартный Object новыми методами assignDeep, createDeep и cloneDeep, которые делают тоже что и стандартные (assign(es6) и create) только рекурсивно ко всем уровням обьекта, включаяя массивы.
 
 `assignDeep` возвращает свой первый аргумент с переопределенными значениями и методами из обьектов с последнего до третьего аргумента. Если второй аргумент true тогда все масивы будут сначала очищенны.
 
 `createDeep` возвращает новый обьект клонированный от второго аргумента с установленным прототипом на первый аргумент. Также на каждый внутрениий обьект будет установлен прототип на верхний обьект.
+
+`cloneDeep` возвращает новый обьект - точную копию переданного в аргумент.
 
 ## Getting Started
 ### On the server
@@ -31,6 +33,9 @@ var result = Object.assignDeep( result, true /* clean array */, from [, andfrom 
 
 // Object.createDeep( )
 var resObject = Object.createDeep( protoObject, fromObject );
+
+// Object.cloneDeep( )
+var resObject = Object.cloneDeep( fromObject );
 ```
 
 ### In the browser
@@ -53,6 +58,9 @@ var result = Object.assignDeep( result, true /* clean array */, from [, andfrom 
 
 // Object.createDeep( )
 var result = Object.createDeep( proto, from );
+
+// Object.cloneDeep( )
+var resObject = Object.cloneDeep( fromObject );
 </script>
 ```
 

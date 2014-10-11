@@ -15,7 +15,6 @@
       configurable: true,
       writable: true,
       value: function( target, cleararray ){
-        "use strict";
 
         if( target === undefined || target === null )
           throw new TypeError( "Cannot convert first argument to object" );
@@ -86,7 +85,6 @@
       configurable: true,
       writable: true,
       value: function( proto ){
-        "use strict";
 
         if( proto === undefined || proto === null )
           throw new TypeError( "Cannot convert first argument to object" );
@@ -98,8 +96,8 @@
         var source = arguments[ 1 ];
         if( source === undefined || source === null ) return to;
         
-        if( source.__proto__ === Array.prototype ) {
-          to = [];
+        if( source.__proto__ === Array.prototype ){
+          to = [ ];
           to.__proto__ = proto;
         }
 
@@ -134,4 +132,23 @@
       }
     } );
   }
-} )( ); 
+
+  if( !Object.cloneDeep ){
+    Object.defineProperty( Object, "cloneDeep", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function( source ){
+
+        var empty;
+        if( source.__proto__ === Array.prototype ){
+          empty = [ ];
+        } else {
+          empty = { };
+        }
+        return Object.assignDeep( empty, true, source );
+      }
+    } );
+  }
+
+} )( );
