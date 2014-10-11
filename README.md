@@ -1,4 +1,4 @@
-# extobj.js
+# extobj.js v0.1.1
 ###[en]
 `extobj.js` extend standard Object with new methods assignDeep, createDeep and cloneDeep, which works recursively as standard methods (assign(es6) and create) to all levels of object, including array.
 
@@ -15,7 +15,7 @@
 
 `createDeep` возвращает новый обьект клонированный от второго аргумента с установленным прототипом на первый аргумент. Также на каждый внутрениий обьект будет установлен прототип на верхний обьект.
 
-`cloneDeep` возвращает новый обьект - точную копию переданного в аргумент.
+`cloneDeep` возвращает новый обьект - полную копию переданного в аргумент обьекта.
 
 ## Getting Started
 ### On the server
