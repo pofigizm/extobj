@@ -1,11 +1,6 @@
-/*
- * extobj
- * https://github.com/Pofigizm/extobj
- *
- * Copyright (c) 2014 Denis
- * Licensed under the MIT license.
- */
-
+/*! extobj - v0.1.0 - 2014-10-11
+* https://github.com/Pofigizm/extobj
+* Copyright (c) 2014 Denis; Licensed MIT */
 ( function( ){
   'use strict';
 

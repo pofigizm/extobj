@@ -1,14 +1,28 @@
-# extobj
+# extobj.js
+[en]
+extobj.js extend standart Object with two methods assignDeep and createDeep.
 
-The best commonjs module ever.
+My methods works recursivity as standart methods (assign and create) to all levels of object, including array.
+`assignDeep` return self first argument with overridden value and methots from last to third arguments. If second arguments is true then all array in first argument will be cleaned before.
+`createDeep` return new object cloned from second arguments with setuped prototype to first arguments. Also on each down object will be setuped prototype to upper object.      
+
+[rus]
+extobj.js расширяет стандартный Object двумя методами assignDeep и createDeep.
+
+Мои методы делают тоже что и стандартные (assign and create) только рекурсивно ко всем уровням обьекта, включаяя массивы.
+`assignDeep` возвращает свой первый аргумент с переопределенными значениями и методами из обьектов с последнего до третьего аргумента. Если второй аргумент true тогда все масивы будут сначала очищенны.
+`createDeep` возвращает новый обьект клонированный от второго аргумента с установленным прототипом на первый аргумент. Также на каждый внутрениий обьект будет установлен прототип на верхний обьект.
 
 ## Getting Started
 ### On the server
-Install the module with: `npm install extobj`
+Install the module with: // `npm install extobj` comming soon
 
 ```javascript
-var extobj = require('extobj');
-extobj.awesome(); // "awesome"
+require('extobj');
+// Object.assignDeep( )
+var resObject = Object.assignDeep( resObject, true /* clean array */, fromObject [, andObject [, ...] ] );
+// Object.createDeep( )
+var resObject = Object.createDeep( protoObject, fromObject );
 ```
 
 ### In the browser
@@ -22,19 +36,10 @@ In your web page:
 ```html
 <script src="dist/extobj.min.js"></script>
 <script>
-awesome(); // "awesome"
-</script>
-```
-
-In your code, you can attach extobj's methods to any object.
-
-```html
-<script>
-var exports = Yeoman.utils;
-</script>
-<script src="dist/extobj.min.js"></script>
-<script>
-Yeoman.utils.awesome(); // "awesome"
+// Object.assignDeep( )
+var resObject = Object.assignDeep( resObject, true /* clean array */, fromObject );
+// Object.createDeep( )
+var resObject = Object.createDeep( protoObject, fromObject );
 </script>
 ```
 
@@ -53,5 +58,4 @@ _Also, please don't edit files in the "dist" subdirectory as they are generated 
 _(Nothing yet)_
 
 ## License
- 
  Copyright (c) 2014 Denis. Licensed under the MIT license.
