@@ -15,31 +15,32 @@ extobj.js расширяет стандартный Object двумя метод
 
 ## Getting Started
 ### On the server
-Install the module with: // `npm install extobj` comming soon
+Install the module with: `npm install extobj`
 
 ```javascript
 require('extobj');
 // Object.assignDeep( )
-var resObject = Object.assignDeep( resObject, true /* clean array */, fromObject [, andObject [, ...] ] );
+var result = Object.assignDeep( result, true /* clean array */, from [, andfrom ] );
 // Object.createDeep( )
 var resObject = Object.createDeep( protoObject, fromObject );
 ```
 
 ### In the browser
-Download the [production version][min] or the [development version][max].
+Install the module with: `bower install Pofigizm/extobj` 
+Or only download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/Pofigizm/extobj/master/dist/extobj.min.js
-[max]: https://raw.github.com/Pofigizm/extobj/master/dist/extobj.js
+[min]: https://raw.githubusercontent.com/Pofigizm/extobj/master/dist/extobj.min.js
+[max]: https://raw.githubusercontent.com/Pofigizm/extobj/master/dist/extobj.js
 
 In your web page:
 
 ```html
-<script src="dist/extobj.min.js"></script>
+<script src="bower_components/extobj/dist/extobj.min.js"></script>
 <script>
 // Object.assignDeep( )
-var resObject = Object.assignDeep( resObject, true /* clean array */, fromObject );
+var result = Object.assignDeep( result, true /* clean array */, from [, andfrom ] );
 // Object.createDeep( )
-var resObject = Object.createDeep( protoObject, fromObject );
+var result = Object.createDeep( proto, from );
 </script>
 ```
 
