@@ -1,6 +1,6 @@
 {
   "name": "extobj",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The module extending Object with new methods assignDeep, createDeep and cloneDeep.",
   "keywords": [
     "Object.assignDeep", "Object.createDeep", "Object.cloneDeep", "Object assign deep", "Object clone deep", "Object copy deep", "Object create deep", "Object full copy", "Object full assign", "Object full clone", "Java script"  

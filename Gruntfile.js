@@ -52,9 +52,9 @@ module.exports = function (grunt) {
         },
         src: ['src/**/*.js']
       },
-      //test: {
-      //  src: ['test/**/*.js']
-      //},
+      test: {
+        src: ['test/*.js']
+      },
     },
     watch: {
       gruntfile: {
