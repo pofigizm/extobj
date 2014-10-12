@@ -116,8 +116,8 @@ Object.createDeep( proto, source ).arr[0].obj.value  // 123
 ```javascript
 var source = {a:1, obj: {b:1, obj: {c:1}}, arr:[{d:1, obj:{e:1}}]};
 
-Object.createDeep( source ) !== source // true
-Object.createDeep( source ) // {a:1, obj: {b:1, obj: {c:1}}, arr:[{d:1, obj:{e:1}}]}
+Object.cloneDeep( source ) !== source // true
+Object.cloneDeep( source ) // {a:1, obj: {b:1, obj: {c:1}}, arr:[{d:1, obj:{e:1}}]}
 ```
 
 ## Contributing
